@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ user.name }}{% endblock %}
+
+    
+{% block body %}
+<div class="container-tm">
+    <h1>Detailed Information</h1>
+    <div class="alert alert-info">
+        <h2>{{ user.name }}</h2>
+        <p>{{ user.email }}</p>
+        <p>{{ user.date.date() }}</p>
+        <p>{{ user.message }}</p>
+        <a href="/admin/{{ user.id }}/del" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+{% endblock %}

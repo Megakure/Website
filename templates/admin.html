@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}Diagoona - About Page{% endblock %}
+
+    
+{% block body %}
+    <div class="container-tm" style="margin: 30px">
+        <h1 style="margin-bottom: 30px; text-align: center; -webkit-text-stroke: 1px black; /* width and color */">ALL EMAILS:</h1>
+        {% if users|length > 0 %}
+        
+            {% for i in users %}
+            <div class="alert alert-info">
+                <h2>{{ i.name }}</h2>
+                <p>{{ i.email }}</p>
+                <p>{{ i.date.date() }}</p>
+                <a href="/admin/{{ i.id }}" class="btn btn-warning">Message</a>
+            </div>
+            {% endfor %}
+
+        {% else %} 
+        <p>There are no messages so far</p>
+        {% endif %}
+
+        <a href="/" class="btn btn-info">Home page</a>
+    </div>
+{% endblock %}

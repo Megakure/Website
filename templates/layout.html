@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> 
+  <link href="{{ url_for ('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" /> 
+  <link href="{{ url_for ('static', filename='fontawesome/css/all.min.css') }}" rel="stylesheet" /> 
+  <link href="{{ url_for ('static', filename='css/templatemo-diagoona.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+
+{% block body %}
+{% endblock %}
+
+  <script src="../static/js/jquery-3.4.1.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/jquery.backstretch.min.js"></script>
+  <script src="../static/js/templatemo-script.js"></script>
+</body>
+</html>
